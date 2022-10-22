@@ -1,6 +1,6 @@
 /** @type {import('./$types').PageLoad} */
 export async function load({ params }) {
-	await fetch('https://google.com');
+	await fetch('/api/random-number');
 	return {
 		post: {
 			title: `Title for ${params.slug} goes here`,
