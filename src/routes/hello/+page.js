@@ -1,9 +1,10 @@
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }) {
-	await fetch('/api/random-number');
+	let a = await (await fetch('/api/random-number')).text();
+	await fetch("https://httpbin.org")
 	return {
 		post: {
-			title: `Title`,
+			title: `Title ${a}`,
 			content: `Content for hello goes here`
 		}
 	};
