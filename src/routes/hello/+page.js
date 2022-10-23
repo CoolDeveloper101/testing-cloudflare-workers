@@ -1,10 +1,10 @@
 /** @type {import('./$types').PageLoad} */
-export async function load({ params }) {
+export async function load({ fetch }) {
 	await fetch('/api/random-number');
 	return {
 		post: {
-			title: `Title for ${params.slug} goes here`,
-			content: `Content for ${params.slug} goes here`
+			title: `Title`,
+			content: `Content for hello goes here`
 		}
 	};
 }
